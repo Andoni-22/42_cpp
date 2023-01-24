@@ -1,7 +1,3 @@
-//
-// Created by Andoni Fiat arriola on 1/13/23.
-//
-
 #ifndef WEAPON_HPP
 #define WEAPON_HPP
 
@@ -14,8 +10,8 @@ private:
 public:
 	Weapon(std::string type);
 	~Weapon();
-	int setType(const std::string& name);
-	const std::string& get_type() const;
+	void setType(const std::string name);
+	const std::string& get_type();
 };
 
 #endif

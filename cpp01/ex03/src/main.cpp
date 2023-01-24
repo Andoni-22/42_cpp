@@ -1,7 +1,3 @@
-//
-// Created by Andoni Fiat arriola on 1/13/23.
-//
-
 #include "Weapon.hpp"
 #include "HumanA.hpp"
 #include "HumanB.hpp"
