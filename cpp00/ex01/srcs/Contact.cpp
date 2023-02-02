@@ -31,7 +31,22 @@ int Contact::getId() {
 
 //TODO set text format
 void Contact::showInfo() {
-	std::cout<<this->id<<" | "<<this->firstName<<" | "<<this->lastName<<" | "<<this->nickName<<std::endl;
+
+	std::cout << std::setw(10) << this->id<<"|";
+	if (this->firstName.length() > 10)
+		std::cout << "|" << this->firstName.substr(0, 9) << ".";
+	else
+		std::cout << "|" << std::setw(10) << std::setfill(' ') << this->firstName;
+
+	if (this->lastName.length() > 10)
+		std::cout << "|" << this->lastName.substr(0,9) << ".";
+	else
+		std::cout << "|" << std::setw(10) << std::setfill(' ') << this->lastName;
+
+	if (this->nickName.length() > 10)
+		std::cout << "|" << this->nickName.substr(0,9) << ".|" << std::endl;
+	else
+		std::cout << "|" << std::setw(10) << std::setfill(' ') << this->nickName << "|" << std::endl ;
 }
 
 //TODO set text format
